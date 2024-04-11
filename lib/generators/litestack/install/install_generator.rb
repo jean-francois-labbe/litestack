@@ -20,7 +20,7 @@ class Litestack::InstallGenerator < Rails::Generators::Base
 
   def modify_active_job_adapter
     gsub_file "config/environments/production.rb",
-      "# config.active_job.queue_adapter     = :resque",
+      "# config.active_job.queue_adapter = :resque",
       "config.active_job.queue_adapter = :litejob"
   end
 
